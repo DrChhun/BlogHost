@@ -15,6 +15,12 @@
         html {
             scroll-behavior: smooth;
         }
+
+        ::selection {
+        color: white;
+        background: rgb(0 0 255);
+        }
+        
     </style>
 
     <nav class="flex justify-between px-[1.5rem] py-[1rem] md:px-[3.5rem] md:py-[2rem] z-0">
