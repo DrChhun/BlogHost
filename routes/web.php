@@ -28,6 +28,7 @@ Route::post('/store', [CollectController::class, "message"]);
 Route::get('/cate/auto', [ContentController::class, "auto"]);
 Route::get('/cate/mobile', [ContentController::class, "mobile"]);
 Route::get('/cate/tips', [ContentController::class, "tips"]);
+Route::get('/cate/tech', [ContentController::class, "tech"]);
 
 Route::get('/dashboard', [DashboardController::class, "index"]);
 

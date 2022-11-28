@@ -8,7 +8,7 @@
                 <a href="/content/{{$auto->id}}">
                 <img class="mb-[1.5rem] h-[260px] w-[100%] object-covern" @if($auto-> image1) src="{{ asset('storage/'.$auto->image1) }}" @else src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTNU14t4OtvdSZf-rTJAQWI6LdTIw5nYCYT1V3SfHgWja6cYMbG" @endif>
                     <h1 class="mb-[.5rem] text-lg font-bold truncate">{{$auto->title}}</h1>
-                    <h1 class="mb-[.5rem] truncate">{{$auto->text1}}</h1>
+                    <h1 class="mb-[.5rem] truncate">{!!$auto->text1!!}</h1>
                     <h1>{{$auto->created_at}}</h1>
                 </a>
             </div>

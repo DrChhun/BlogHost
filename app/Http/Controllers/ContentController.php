@@ -72,6 +72,11 @@ class ContentController extends Controller
         return view('cate.tip', compact('tips'));
     }
 
+    public function tech() {
+        $tech = Content::where('category_id', 4)->orderBy('id', 'desc')->get();
+        return view('cate.tech', compact('tech'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

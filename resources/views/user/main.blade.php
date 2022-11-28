@@ -23,6 +23,7 @@
             <ul class="hidden md:flex">
                 <li class="mr-[1rem] font-bold hover:text-blue-700 duration-250"><a class="duration-200 hover:border-t-4" href="/cate/auto">Auto</a></li>
                 <li class="mr-[1rem] font-bold hover:text-blue-700 duration-250"><a class="duration-200 hover:border-t-4" href="/cate/mobile">Mobile</a></li>
+                <li class="mr-[1rem] font-bold hover:text-blue-700 duration-250"><a class="duration-200 hover:border-t-4" href="/cate/tech">Tech</a></li>
                 <li class="font-bold hover:text-blue-700 duration-250"><a class="duration-200 hover:border-t-4" href="/cate/tips">Tips</a></li>
             </ul>   
             <!-- hamburder icon -->
@@ -45,6 +46,7 @@
             <ul class="flex flex-col justify-center text-center">
                 <a href="/cate/auto" class="text-black text-4xl mb-[2rem] hover:underline duration-200">AUTO</a>
                 <a href="/cate/mobile" class="text-black text-4xl mb-[2rem] hover:underline">MOBILE</a>
+                <a href="/cate/tech" class="text-black text-4xl mb-[2rem] hover:underline">TECH</a>
                 <a href="/cate/tips" class="text-black text-4xl hover:underline">TIPS</a>
             </ul>
         </div>
@@ -111,7 +113,9 @@
             menu.classList.toggle("hidden");
         });
 
-        AOS.init();
+        AOS.init({
+            once: true,
+        });
 
 
 

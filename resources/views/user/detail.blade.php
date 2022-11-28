@@ -25,7 +25,7 @@
             <div class="w-full md:w-[80%]">
                 <h1 class="mb-[2rem]">Posted at {{$content->created_at}}</h1>
                         <p class="mb-[5rem] break-words">{!!$content->text1!!}</p>
-                    <div class="bg-black h-[200px] md:h-[300px] lg:h-[500px] w-[90%] md:w-full mb-[5rem] m-auto">
+                    <div class="bg-black h-[200px] md:h-[300px] lg:h-[500px] w-[90%] md:w-full mb-[5rem] m-auto mt-8">
                         <img class="shadow-xl h-full w-full object-cover" @if($content-> image2) src="{{ asset('storage/'.$content->image2) }}" @else src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTNU14t4OtvdSZf-rTJAQWI6LdTIw5nYCYT1V3SfHgWja6cYMbG" @endif>
                     </div>
                     <p class="mb-[5rem] break-words">{!!$content->text2!!}</p>
@@ -34,7 +34,7 @@
     @endforeach
     
     <!-- @if($similar == true) -->
-        <div class="md:pb-[2rem] md:pt-[6rem]">
+        <div class="md:pb-[2rem] md:pt-[6rem] pt-8">
             <h1 class="mb-[1rem] text-4xl font-bold">@if($similar) Relate @else "" @endif</h1>
             <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                 @foreach($similar as $similar)
