@@ -127,7 +127,7 @@ class DashboardController extends Controller
                     'category_id' => $request->category
                 ]);
 
-        dd($post);
+        // dd($post);
 
         $category = Category::find($request->category);
 

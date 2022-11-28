@@ -8,10 +8,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 </head>
 <body>
 
@@ -67,11 +63,11 @@
                 @csrf
                 <div class="flex flex-col mb-[1rem]">
                     <label class="mb-[.5rem]">Email address</label>
-                    <input name="email" placeholder="example@email.com" class="focus:outline-black p-[1rem] border-2" type="email"></input>
+                    <input name="email" placeholder="example@email.com" class="focus:outline-0 focus:border-2 focus:border-black p-[1rem] border-2" type="email"></input>
                 </div>
                 <div class="flex flex-col">
                     <label class="mb-[.5rem]">Message</label>
-                    <input name="message" placeholder="Hello..." class="focus:outline-black p-[1rem] border-2" type="text"></input>
+                    <input name="message" placeholder="Hello..." class="focus:outline-0 focus:border-2 focus:border-black p-[1rem] border-2" type="text"></input>
                 </div>
                 <button type="submit"></button>
             </form>
@@ -117,20 +113,6 @@
 
         AOS.init();
 
-        $('#summernote').summernote({
-        placeholder: 'Hello stand alone ui',
-        tabsize: 2,
-        height: 120,
-        toolbar: [
-          ['style', ['style']],
-          ['font', ['bold', 'underline', 'clear']],
-          ['color', ['color']],
-          ['para', ['ul', 'ol', 'paragraph']],
-          ['table', ['table']],
-          ['insert', ['link', 'picture', 'video']],
-          ['view', ['fullscreen', 'codeview', 'help']]
-        ]
-      });
 
 
     </script>

@@ -36,9 +36,9 @@
             </div>
             <div class="flex flex-col mb-4">
                 <label class="text-xl font-bold mb-2">Content</label>
-                <textarea name="text2" class="p-4 border-2 border-gray-200 focus:outline-0 h-[auto]" type="text" placeholder="day by day we looking for..."></textarea>
+                <textarea id="summer" name="text2" class="p-4 border-2 border-gray-200 focus:outline-0 h-[auto]" type="text" placeholder="day by day we looking for..."></textarea>
             </div>
-            <button type="submit"></button>
+            <button class="bg-blue-700 p-4 w-[100%] mt-8 rounded-sm font-extrabold hover:bg-blue-600 duration-200 text-white" type="submit">SUBMIT</button>
         </form>
     </div>
 @endsection

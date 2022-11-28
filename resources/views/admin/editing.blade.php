@@ -1,20 +1,18 @@
-@extends('admin.dashboard')
+@extends('dashboard')
 
 @section('title')
-    Edit Content
+    <h1 class="">Edit Content</h1>    
 @endsection
 
 @section('content')
-    <div>
-
-        <h1 class="text-5xl font-bold">Edit Content</h1>
+    <div class="p-8">
         
         <form class="mt-8" action="/editing/{{$match->id}}" method="post" enctype="multipart/form-data">
             @csrf
             @method('PATCH')
             <div class="flex flex-col mb-4">
                 <label class="text-xl font-bold mb-2">Category</label>
-                <select name="category" class="p-4 border-2 focus:outline-0 focus:border-2 focus:border-black">
+                <select name="category" class="p-4 border-2 border-gray-200 focus:outline-0">
                     <option>Choose</option>
                     @foreach($category as $category)
                     <option @selected(old('category', $match->category_id) == $category->id) value="{{$category->id}}" >{{$category->name}}</option>
@@ -23,7 +21,7 @@
             </div>
             <div class="flex flex-col mb-4">
                 <label class="text-xl font-bold mb-2">Title</label>
-                <input value="{{old('title', $match->title)}}" name="title" class="p-4 border-2 focus:outline-0 focus:border-2 focus:border-black" type="text" placeholder="Newest technology..."></input>
+                <input value="{{old('title', $match->title)}}" name="title" class="p-4 border-2 border-gray-200 focus:outline-0" type="text" placeholder="Newest technology..."></input>
             </div>
             <div class="flex flex-col mb-4">
                 <label class="text-xl font-bold mb-2">Image</label>
@@ -31,7 +29,7 @@
             </div>
             <div class="flex flex-col mb-4">
                 <label class="text-xl font-bold mb-2">Content</label>
-                <textarea value="hello" name="text1" class="p-4 border-2 focus:outline-0 focus:border-2 focus:border-black" type="text" placeholder="a current century we all need...">{{$match->text1}}</textarea>
+                <textarea id="summernote" value="hello" name="text1" class="p-4 border-2 focus:outline-0 focus:border-2 focus:border-black" type="text" placeholder="a current century we all need...">{!!$match->text1!!}</textarea>
             </div>
             <div class="flex flex-col mb-4">
                 <label class="text-xl font-bold mb-2">Image</label>
@@ -39,9 +37,9 @@
             </div>
             <div class="flex flex-col mb-4">
                 <label class="text-xl font-bold mb-2">Content</label>
-                <textarea name="text2" class="p-4 border-2 focus:outline-0 focus:border-2 focus:border-black h-[auto]" type="text" placeholder="day by day we looking for...">{{$match->text2}}</textarea>
+                <textarea id="summer" name="text2" class="p-4 border-2 focus:outline-0 focus:border-2 focus:border-black h-[auto]" type="text" placeholder="day by day we looking for...">{!!$match->text2!!}</textarea>
             </div>
-            <button type="submit"></button>
+            <button class="bg-blue-700 p-4 w-[100%] mt-8 rounded-sm font-extrabold hover:bg-blue-600 duration-200 text-white" type="submit">SUBMIT</button>
         </form>
     </div>
 @endsection

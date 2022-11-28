@@ -24,11 +24,11 @@
         <div class="w-full h-[auto] flex justify-center">
             <div class="w-full md:w-[80%]">
                 <h1 class="mb-[2rem]">Posted at {{$content->created_at}}</h1>
-                        <p class="mb-[5rem]">{!!$content->text1!!}</p>
+                        <p class="mb-[5rem] break-words">{!!$content->text1!!}</p>
                     <div class="bg-black h-[200px] md:h-[300px] lg:h-[500px] w-[90%] md:w-full mb-[5rem] m-auto">
                         <img class="shadow-xl h-full w-full object-cover" @if($content-> image2) src="{{ asset('storage/'.$content->image2) }}" @else src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTNU14t4OtvdSZf-rTJAQWI6LdTIw5nYCYT1V3SfHgWja6cYMbG" @endif>
                     </div>
-                    <p class="mb-[5rem]">{!!$content->text2!!}</p>
+                    <p class="mb-[5rem] break-words">{!!$content->text2!!}</p>
             </div>
         </div>
     @endforeach
@@ -42,7 +42,7 @@
                     <a href="/content/{{$similar->id}}">
                     <img class="mb-[1.5rem] h-[260px] w-[100%] object-cover" @if($similar-> image1) src="{{ asset('storage/'.$similar->image1) }}" @else src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTNU14t4OtvdSZf-rTJAQWI6LdTIw5nYCYT1V3SfHgWja6cYMbG" @endif>
                         <h1 class="mb-[.5rem] text-lg font-bold truncate">{{$similar->title}}</h1>
-                        <h1 class="mb-[.5rem] truncate">{{$similar->text1}}</h1>
+                        <h1 class="mb-[.5rem] truncate">{!!$similar->text1!!}</h1>
                         <h1>{{$similar->created_at}}</h1>
                     </a>
                 </div>
