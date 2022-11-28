@@ -28,7 +28,7 @@
             </div>
             <div class="flex flex-col mb-4">
                 <label class="text-xl font-bold mb-2">Content</label>
-                <textarea name="text1" class="p-4 border-2 border-gray-200 focus:outline-0" type="text" placeholder="a current century we all need..."></textarea>
+                <textarea id="summernote" name="text1" class="p-4 border-2 border-gray-200 focus:outline-0" type="text" placeholder="a current century we all need..."></textarea>
             </div>
             <div class="flex flex-col mb-4">
                 <label class="text-xl font-bold mb-2">Image</label>

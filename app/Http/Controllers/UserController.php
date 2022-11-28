@@ -21,7 +21,7 @@ class UserController extends Controller
         $auto = Content::where('category_id', 1)->orderBy('id', 'desc')->limit(4)->get();
         $mobile = Content::where('category_id', 2)->limit(4)->orderBy('id', 'desc')->get();
         $tip = Content::where('category_id', 3)->limit(4)->orderBy('id', 'desc')->get();
-        $post = Content::limit(4)->orderBy('id', 'desc')->get();
+        $post = Content::orderBy('id', 'desc')->get();
         // dd($auto);
         return view('user.home', compact('post', 'auto', 'mobile', 'tip'));
     }
