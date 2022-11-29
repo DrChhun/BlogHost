@@ -25,7 +25,7 @@ use App\Http\Controllers\ContentController;
 Route::get('/', [UserController::class, "home"]);
 Route::get('/content/{id}', [UserController::class, "detail"]);
 Route::post('/store', [CollectController::class, "message"]);
-Route::get('/cate/auto', [ContentController::class, "auto"]);
+Route::get('/cate/vehicle', [ContentController::class, "auto"]);
 Route::get('/cate/mobile', [ContentController::class, "mobile"]);
 Route::get('/cate/tips', [ContentController::class, "tips"]);
 Route::get('/cate/tech', [ContentController::class, "tech"]);
@@ -38,9 +38,7 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', [DashboardController::class, "track"])->name('dashboard');
     Route::get('/post', [DashboardController::class, "post"]);
     Route::post('/posting', [ContentController::class, "posting"]);
     Route::get('/edit', [DashboardController::class, "editpage"]);

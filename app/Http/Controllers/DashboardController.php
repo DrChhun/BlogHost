@@ -39,6 +39,14 @@ class DashboardController extends Controller
 
     }
 
+    public function track() {
+        $vehicle = Content::where('category_id', 1)->count();
+        $mobile = Content::where('category_id', 2)->count();
+        $tip = Content::where('category_id', 3)->count();
+        $tech = Content::where('category_id', 4)->count();
+        return view('admin.chart', compact('vehicle', 'mobile', 'tip', 'tech'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

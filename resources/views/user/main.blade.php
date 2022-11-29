@@ -18,16 +18,16 @@
 
         ::selection {
         color: white;
-        background: rgb(0 0 255);
+        background: rgba(0, 0, 255, 0.7);
         }
-        
+
     </style>
 
-    <nav class="flex justify-between px-[1.5rem] py-[1rem] md:px-[3.5rem] md:py-[2rem] z-0">
+    <nav class="flex justify-between px-[1.5rem] py-[1rem] lg:px-[3.5rem] md:p-[2rem] z-0">
         <h1 id="mega" class="text-4xl font-bold"><a href="/">MEGA</a></h1>
         <div>
             <ul class="hidden md:flex">
-                <li class="mr-[1rem] font-bold hover:text-blue-700 duration-250"><a class="duration-200 hover:border-t-4" href="/cate/auto">Auto</a></li>
+                <li class="mr-[1rem] font-bold hover:text-blue-700 duration-250"><a class="duration-200 hover:border-t-4" href="/cate/vehicle">Vehicle</a></li>
                 <li class="mr-[1rem] font-bold hover:text-blue-700 duration-250"><a class="duration-200 hover:border-t-4" href="/cate/mobile">Mobile</a></li>
                 <li class="mr-[1rem] font-bold hover:text-blue-700 duration-250"><a class="duration-200 hover:border-t-4" href="/cate/tech">Tech</a></li>
                 <li class="font-bold hover:text-blue-700 duration-250"><a class="duration-200 hover:border-t-4" href="/cate/tips">Tips</a></li>
@@ -50,7 +50,7 @@
     <div id="menu" class="bg-white absolute top-0 h-screen z-[999] w-full sticky hidden">
         <div id="free" class="flex justify-center h-screen">
             <ul class="flex flex-col justify-center text-center">
-                <a href="/cate/auto" class="text-black text-4xl mb-[2rem] hover:underline duration-200">AUTO</a>
+                <a href="/cate/vehicle" class="text-black text-4xl mb-[2rem] hover:underline duration-200">VEHICLE</a>
                 <a href="/cate/mobile" class="text-black text-4xl mb-[2rem] hover:underline">MOBILE</a>
                 <a href="/cate/tech" class="text-black text-4xl mb-[2rem] hover:underline">TECH</a>
                 <a href="/cate/tips" class="text-black text-4xl hover:underline">TIPS</a>
@@ -58,31 +58,33 @@
         </div>
     </div>
 
-    <section class="px-[1.5rem] py-[1rem] md:px-[3.5rem] md:py-[2rem]">
+    <section class="px-[1.5rem] py-[1rem] lg:px-[3.5rem] md:p-[2rem]">
         @yield('content')
     </section>
 
-    <section class="md:flex px-[1.5rem] py-[1rem] md:px-[3.5rem] md:py-[2rem] w-[100%] bg-[url('/assets/liquid.jpg')]">
-        <div class="md:w-[40%] text-4xl font-bold mb-[1rem] md:mb-0">
-            Get In Touch
-        </div>
-        <div class="md:w-[60%]">
-            <form action="/store" method="post" enctype="multipart/form-data">
-                @csrf
-                <div class="flex flex-col mb-[1rem]">
-                    <label class="mb-[.5rem]">Email address</label>
-                    <input name="email" placeholder="example@email.com" class="focus:outline-0 focus:border-2 focus:border-black p-[1rem] border-2" type="email"></input>
-                </div>
-                <div class="flex flex-col">
-                    <label class="mb-[.5rem]">Message</label>
-                    <input name="message" placeholder="Hello..." class="focus:outline-0 focus:border-2 focus:border-black p-[1rem] border-2" type="text"></input>
-                </div>
-                <button type="submit"></button>
-            </form>
-        </div>
-    </section>
+    <div class="lg:px-[3.5rem] md:px-[2rem]">
+        <section class="md:flex px-[1.5rem] py-[1rem] md:px-[3.5rem] md:py-[2rem] w-[100%] bg-[url('/assets/liquid.jpg')] rounded-lg">
+            <div class="md:w-[40%] text-4xl font-bold mb-[1rem] md:mb-0">
+                Get In Touch
+            </div>
+            <div class="md:w-[60%]">
+                <form action="/store" method="post" enctype="multipart/form-data">
+                    @csrf
+                    <div class="flex flex-col mb-[1rem]">
+                        <label class="mb-[.5rem]">Email address</label>
+                        <input name="email" placeholder="example@email.com" class="focus:outline-0 focus:border-2 focus:border-black p-[1rem] border-2" type="email"></input>
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="mb-[.5rem]">Message</label>
+                        <input name="message" placeholder="Hello..." class="focus:outline-0 focus:border-2 focus:border-black p-[1rem] border-2" type="text"></input>
+                    </div>
+                    <button type="submit"></button>
+                </form>
+            </div>
+        </section>
+    </div>
 
-    <footer class="md:flex md:justify-between px-[1.5rem] py-[1rem] md:px-[3.5rem] md:py-[2rem]">
+    <footer class="md:flex md:justify-between px-[1.5rem] py-[1rem] lg:px-[3.5rem] md:p-[2rem]">
         <h1 class="text-4xl font-bold mb-[1rem] md:mb-0">MEGA</h1>
         <div class="md:flex">
             <div class="flex flex-col mr-[4rem]">
