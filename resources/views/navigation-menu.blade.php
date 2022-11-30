@@ -28,6 +28,12 @@
                         {{ __('Edit') }}
                     </x-jet-nav-link>
                 </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="/message" :active="request()->routeIs('/message')">
+                        {{ __('Message') }}
+                    </x-jet-nav-link>
+                </div>
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -173,6 +179,22 @@
                 <!-- Account Management -->
                 <x-jet-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
                     {{ __('Profile') }}
+                </x-jet-responsive-nav-link>
+
+                <x-jet-responsive-nav-link href="/post" :active="request()->routeIs('profile.show')">
+                    {{ __('Post') }}
+                </x-jet-responsive-nav-link>
+
+                <x-jet-responsive-nav-link href="/edit" :active="request()->routeIs('profile.show')">
+                    {{ __('Edit') }}
+                </x-jet-responsive-nav-link>
+
+                <x-jet-responsive-nav-link href="/message" :active="request()->routeIs('profile.show')">
+                    {{ __('Message') }}
+                </x-jet-responsive-nav-link>
+
+                <x-jet-responsive-nav-link href="/dashboard" :active="request()->routeIs('profile.show')">
+                    {{ __('Track') }}
                 </x-jet-responsive-nav-link>
 
                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())

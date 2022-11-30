@@ -45,4 +45,6 @@ Route::middleware([
     Route::get('/delete/{id}', [DashboardController::class, "destroy"]);
     Route::get('/edit/content/{id}', [DashboardController::class, "edit"]);
     Route::patch('/editing/{id}', [DashboardController::class, "update"]);
+    Route::get('/message', [DashboardController::class, "message"]);
+    Route::get('/delete/message/{id}', [DashboardController::class, "deleteMessage"]);
 });

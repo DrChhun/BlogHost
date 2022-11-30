@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Content;
+use App\Models\Collect;
 
 class DashboardController extends Controller
 {
@@ -45,6 +46,17 @@ class DashboardController extends Controller
         $tip = Content::where('category_id', 3)->count();
         $tech = Content::where('category_id', 4)->count();
         return view('admin.chart', compact('vehicle', 'mobile', 'tip', 'tech'));
+    }
+
+    public function message() {
+        $collect = Collect::all();
+        return view('admin.message', compact('collect'));
+    }
+
+    public function deleteMessage($id) {
+        $delete = Collect::where('id', $id)->get();
+        $delete->each->delete();
+        return redirect()->back();
     }
 
     /**

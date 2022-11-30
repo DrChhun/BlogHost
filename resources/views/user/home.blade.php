@@ -14,12 +14,12 @@
     <!-- recent content -->
 
     <div class="md:pb-[5rem] md:pt-[6rem] pt-[2.5rem]">
-        <h1 class="mb-[4rem] text-4xl font-bold">Recent</h1>
+        <h1 class="mb-[4rem] text-2xl md:text-4xl font-bold">Recent</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             @foreach($post as $post)
             <div data-aos="zoom-in" class="mb-[2rem] md:mb-16">
                 <a href="/content/{{$post->id}}">
-                <img class="mb-[1.5rem] h-[240px] w-[100%] object-cover hover:object-cover hover:scale-105 duration-200 rounded-lg" @if($post-> image1) src="{{ asset('storage/'.$post->image1) }}" @else src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTNU14t4OtvdSZf-rTJAQWI6LdTIw5nYCYT1V3SfHgWja6cYMbG" @endif>
+                <img class="mb-[1.5rem] h-[200px] md:h-[240px] w-[100%] object-cover hover:object-cover hover:scale-105 duration-200 rounded-lg" @if($post-> image1) src="{{ asset('storage/'.$post->image1) }}" @else src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTNU14t4OtvdSZf-rTJAQWI6LdTIw5nYCYT1V3SfHgWja6cYMbG" @endif>
                     <h1 class="mb-[.5rem] text-xl font-bold truncate">{{$post->title}}</h1>
                     <!-- <h1 class="mb-[.5rem] truncate">{!!$post->text1!!}</h1> -->
                     <h1 class="text-sm font-xl">{{$post->created_at->diffForHumans()}}</h1>

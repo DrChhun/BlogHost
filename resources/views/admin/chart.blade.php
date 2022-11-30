@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="grid grid-rows-2 p-8">
-        <div class="grid grid-cols-2 w-[100%]">
+        <div class="grid grid-cols-1 md:grid-cols-2 w-[100%]">
             <div class="px-8 flex flex-col justify-around">
                 <div class="flex justify-center">
                     <div class="block p-6 rounded-lg shadow-sm hover:shadow-lg duration-200 bg-white w-screen flex justify-between">
@@ -47,7 +47,7 @@
                 <canvas class="" id="pieChart"></canvas>
             </div>
         </div>
-        <div class="grid grid-cols-1 w-[100%] mt-16"> 
+        <div class="grid grid-cols-1 w-[100%] md:mt-16"> 
                 <h1 class="text-lg">Bar Chart</h1>
                 <canvas class="" id="myChart"></canvas>
         </div>

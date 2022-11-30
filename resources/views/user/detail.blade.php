@@ -8,7 +8,7 @@
     <div class="h-full w-full">
         <!-- background -->
     @foreach($content as $content)
-        <div class="bg-gray-200 h-[400px] w-full relative rounded-lg">
+        <div class="bg-gray-200 h-[300px] md:h-[400px] w-full relative rounded-lg">
             <img class="h-full w-full object-cover absolute rounded-lg" src="/assets/crumpled_paper_1405.jpg"></img>
             <div class="flex justify-center">
                 <h1 class="mt-[1.5rem] text-3xl md:text-5xl lg:text-7xl font-extrabold flex justify-center absolute">{{$content->title}}</h1>
@@ -35,12 +35,12 @@
     
     <!-- @if($similar == true) -->
         <div class="md:pb-[2rem] md:pt-[6rem] pt-8">
-            <h1 class="mb-[1rem] text-4xl font-bold">@if($similar) Relate @else "" @endif</h1>
-            <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            <h1 class="mb-[1rem] text-2xl md:text-4xl font-bold">@if($similar) Relate @else "" @endif</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                 @foreach($similar as $similar)
                 <div class="">
                     <a href="/content/{{$similar->id}}">
-                    <img class="mb-[1.5rem] h-[260px] w-[100%] object-cover rounded-lg" @if($similar-> image1) src="{{ asset('storage/'.$similar->image1) }}" @else src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTNU14t4OtvdSZf-rTJAQWI6LdTIw5nYCYT1V3SfHgWja6cYMbG" @endif>
+                    <img class="mb-[1.5rem] h-[200px] md:h-[260px] w-[100%] object-cover rounded-lg" @if($similar-> image1) src="{{ asset('storage/'.$similar->image1) }}" @else src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTNU14t4OtvdSZf-rTJAQWI6LdTIw5nYCYT1V3SfHgWja6cYMbG" @endif>
                         <h1 class="mb-[.5rem] text-lg font-bold truncate">{{$similar->title}}</h1>
                         <!-- <h1 class="mb-[.5rem] truncate">{!!$similar->text1!!}</h1> -->
                         <!-- <h1>{{$similar->created_at->diffForHumans()}}</h1> -->

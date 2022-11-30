@@ -11,7 +11,7 @@
 <div class="h-screen w-full text-center flex flex-col justify-center">
     <h1 class="text-5xl font-semibold md:text-7xl md:font-extrabold mb-[1.5rem]">Thanks you for message us</h1>
     <p class=" mb-[1.5rem]">We'll respond you back as soon as possible.</p>
-    <a class="text-blue-700 hover:text-blue-800" href="/home">Back to home page</a>
+    <a class="text-blue-700 hover:text-blue-800" href="/">Back to home page</a>
 </div>
 </body>
 </html>

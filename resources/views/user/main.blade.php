@@ -24,7 +24,7 @@
     </style>
 
     <nav class="flex justify-between px-[1.5rem] py-[1rem] lg:px-[3.5rem] md:p-[2rem] z-0">
-        <h1 id="mega" class="text-4xl font-bold"><a href="/">MEGA</a></h1>
+        <h1 id="mega" class="text-2xl md:text-4xl font-bold"><a href="/">MEGA</a></h1>
         <div>
             <ul class="hidden md:flex">
                 <li class="mr-[1rem] font-bold hover:text-blue-700 duration-250"><a class="duration-200 hover:border-t-4" href="/cate/vehicle">Vehicle</a></li>
@@ -64,7 +64,7 @@
 
     <div class="lg:px-[3.5rem] md:px-[2rem]">
         <section class="md:flex px-[1.5rem] py-[1rem] md:px-[3.5rem] md:py-[2rem] w-[100%] bg-[url('/assets/liquid.jpg')] rounded-lg">
-            <div class="md:w-[40%] text-4xl font-bold mb-[1rem] md:mb-0">
+            <div class="md:w-[40%] text-2xl md:text-4xl font-bold mb-[1rem] md:mb-0">
                 Get In Touch
             </div>
             <div class="md:w-[60%]">
@@ -85,7 +85,7 @@
     </div>
 
     <footer class="md:flex md:justify-between px-[1.5rem] py-[1rem] lg:px-[3.5rem] md:p-[2rem]">
-        <h1 class="text-4xl font-bold mb-[1rem] md:mb-0">MEGA</h1>
+        <h1 class="text-2xl md:text-4xl font-bold mb-[1rem] md:mb-0">MEGA</h1>
         <div class="md:flex">
             <div class="flex flex-col mr-[4rem]">
                 <a href="#" class="mb-[1rem]">HOME</a>
