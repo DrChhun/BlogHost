@@ -43,7 +43,7 @@
                     <img class="mb-[1.5rem] h-[260px] w-[100%] object-cover rounded-lg" @if($similar-> image1) src="{{ asset('storage/'.$similar->image1) }}" @else src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTNU14t4OtvdSZf-rTJAQWI6LdTIw5nYCYT1V3SfHgWja6cYMbG" @endif>
                         <h1 class="mb-[.5rem] text-lg font-bold truncate">{{$similar->title}}</h1>
                         <!-- <h1 class="mb-[.5rem] truncate">{!!$similar->text1!!}</h1> -->
-                        <h1>{{$similar->created_at}}</h1>
+                        <!-- <h1>{{$similar->created_at->diffForHumans()}}</h1> -->
                     </a>
                 </div>
                 @endforeach
